@@ -10,12 +10,11 @@ const config: Config = {
     "./lib/**/*.{ts,tsx}",
   ],
   theme: {
+    debugScreens: {
+      position: ["bottom", "right"],
+      ignore: ["dark"],
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,6 +50,15 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      borderRadius: {
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
+        sm: "calc(var(--radius) - 4px)",
+      },
+      // fontFamily: {
+      //   sans: ["Poppins", "PingFang", ...fontFamily.sans],
+      //   mono: [...fontFamily.mono],
+      // },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

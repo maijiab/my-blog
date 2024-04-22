@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client"
 
 import { DATABASE_URL, NODE_ENV } from "@/config";
 
